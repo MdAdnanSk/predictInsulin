@@ -5,7 +5,7 @@ import pickle as pkl
 
 
 # Importing the dataset
-dataset = pd.read_excel('ML/BloodGlucose.xlsx')
+dataset = pd.read_excel('ml/BloodGlucose.xlsx')
 x = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
 
