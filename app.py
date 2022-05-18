@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import pickle as pkl
-from ml.PredictInsulinv3 import Mean_Absolute_Error, Mean_Squared_Error, Mean_Root_Squared_Error, accuracy
+from ml.PredictInsulin import Mean_Absolute_Error, Mean_Squared_Error, Mean_Root_Squared_Error, accuracy
 
 
 app=Flask(__name__)
