@@ -23,12 +23,19 @@ def predict():
     carbohydrateintake=float(request.form['carbohydrateintake'])
     prediction=model.predict([[bloodglucose,exercise,carbohydrateintake]])
 
-    insulin=round(prediction[0],2)
+    insulinunits=round(prediction[0],2)
 
-    if insulin<0:
-        insulin=0
 
-    return render_template("predict.html",bloodglucose=f'Blood Glucose level={bloodglucose}',carbohydrateintake=f'Carbohydrate Intake={carbohydrateintake}',exercise=f'Exercise ={exercise} hrs.', insulin=f'You Should inject {insulin} unit of Insulin')
+
+    if insulinunits<0:
+        insulin=f'Alert: Excessive exercise or low carb intake could lead to Hypogycemia'
+    else:
+        insulin=f'You Should inject {insulinunits} units of insulin'
+        
+
+
+    return render_template("predict.html",bloodglucose=f'Blood Glucose level={bloodglucose} mg/dl.',carbohydrateintake=f'Carbohydrate Intake={carbohydrateintake} gms.',exercise=f'Exercise ={exercise} hrs.', insulin=insulin, insulinunits=insulinunits)
+
 
 
 @app.route("/scores")
