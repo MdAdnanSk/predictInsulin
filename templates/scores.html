@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Predict Insulin Scores
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-md-6 bg-light">
+                    <div class="login d-flex align-items-center py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 col-xl-7 mx-auto">
+                                    <div class="mb-3">
+                                        <b>{{mae}}</b><br>
+                                        <b>{{mse}}</b><br>
+                                        <b>{{mrse}}</b><br>
+                                        <b>{{accu}}</b>
+                                    </div>
+                                    <hr/>
+                                    <div class="mb-3">
+                                    <a href="/" type="submit" class="btn btn-primary" >Home</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-flex bg-image"></div>
+                <p class="copyright">&#169 Sk. Md. Adnan Md. Aqueel</p>
+                <p class="photocredit">Photo by Towfiqu barbhuiya on Unsplash</p>
+            </div>
+        </div>
+    </body>
+</html>
