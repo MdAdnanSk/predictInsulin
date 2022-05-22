@@ -1,0 +1,34 @@
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('towfiqu-barbhuiya-ZJaK9jQXeDA-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.btn{
+  width: 100%;
+}
+
+.photocredit{
+  text-align: right;
+  position:relative;
+  width:1550px;
+}
+
+.disclaimer{
+  text-align: left;
+  width: 500px;
+}
+.red{
+  color: red;
+}
+.black{
+  color:black;
+}
+.copyright{
+  text-align: left;
+  position:relative;
+}
